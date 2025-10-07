@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная | Минималистичный Сайт</title>
-    <link rel="stylesheet" href="style.css"> 
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <h1>IT GROUP</h1>
+            <h1>Логотип/Название Сайта</h1>
             
             <input type="checkbox" id="menu-toggle-input" class="menu-toggle-input">
             <label for="menu-toggle-input" class="menu-toggle-label">
@@ -35,21 +34,72 @@
             <p>Мы рады, что вы здесь. Наш сайт — это ваш путеводитель в мире современных решений и технологий. Мы предоставляем только самую актуальную информацию и профессиональные услуги.</p>
             
             <div class="image-gallery-5">
+                
                 <div class="image-card-5">
-                    <img src="../Project/img/Home_Desingner.jpg" alt="Дизайн">
-                </div>
-                <div class="image-card-5">
-                    <img src="../Project/img/Home_Programmer.jpg" alt="Разработка">
+                    <input type="checkbox" id="img-gallery-1" class="gallery-input">
+                    <label for="img-gallery-1">
+                        <img src="../Project/img/Home_Desingner.jpg" alt="Дизайн">
+                    </label>
+                    <div class="modal-overlay">
+                        <label for="img-gallery-1" class="close-button">&times;</label>
+                        <div class="modal-content">
+                            <img src="../Project/img/Home_Desingner.jpg" alt="Дизайн">
+                        </div>
                     </div>
-                <div class="image-card-5">
-                    <img src="../Project/img/Home_Marketing.jpg" alt="Маркетинг">
                 </div>
+
                 <div class="image-card-5">
-                    <img src="../Project/img/Home_Support.jpg" alt="Поддержка">
+                    <input type="checkbox" id="img-gallery-2" class="gallery-input">
+                    <label for="img-gallery-2">
+                        <img src="../Project/img/Home_Programmer.jpg" alt="Разработка">
+                    </label>
+                    <div class="modal-overlay">
+                        <label for="img-gallery-2" class="close-button">&times;</label>
+                        <div class="modal-content">
+                            <img src="../Project/img/Home_Programmer.jpg" alt="Разработка">
+                        </div>
+                    </div>
                 </div>
+
                 <div class="image-card-5">
-                    <img src="../Project/img/Home_Consulting.jpg" alt="Консалтинг">
+                    <input type="checkbox" id="img-gallery-3" class="gallery-input">
+                    <label for="img-gallery-3">
+                        <img src="../Project/img/Home_Marketing.jpg" alt="Маркетинг">
+                    </label>
+                    <div class="modal-overlay">
+                        <label for="img-gallery-3" class="close-button">&times;</label>
+                        <div class="modal-content">
+                            <img src="../Project/img/Home_Marketing.jpg" alt="Маркетинг">
+                        </div>
+                    </div>
                 </div>
+
+                <div class="image-card-5">
+                    <input type="checkbox" id="img-gallery-4" class="gallery-input">
+                    <label for="img-gallery-4">
+                        <img src="../Project/img/Home_Support.jpg" alt="Поддержка">
+                    </label>
+                    <div class="modal-overlay">
+                        <label for="img-gallery-4" class="close-button">&times;</label>
+                        <div class="modal-content">
+                            <img src="../Project/img/Home_Support.jpg" alt="Поддержка">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card-5">
+                    <input type="checkbox" id="img-gallery-5" class="gallery-input">
+                    <label for="img-gallery-5">
+                        <img src="../Project/img/Home_Consulting.jpg" alt="Консалтинг">
+                    </label>
+                    <div class="modal-overlay">
+                        <label for="img-gallery-5" class="close-button">&times;</label>
+                        <div class="modal-content">
+                            <img src="../Project/img/Home_Consulting.jpg" alt="Консалтинг">
+                        </div>
+                    </div>
+                </div>
+
             </div>
             
             <div class="site-description">
@@ -63,7 +113,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; IT GROUP. Все права защищены.</p>
+            <p>&copy; 2024 Мой Простой Сайт. Все права защищены.</p>
         </div>
     </footer>
 </body>
