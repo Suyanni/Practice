@@ -1,0 +1,193 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /* СТИЛЬ ДЛЯ "ПРИЛИПАЮЩЕГО" ПОДВАЛА (STICKY FOOTER) */
+        /* -------------------------------------------------------------------------- */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /* Стили Шапки и Навигации (Унифицированы) */
+        /* -------------------------------------------------------------------------- */
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header .container h1 {
+            margin: 0; 
+        }
+
+        /* Гамбургер-хак элементы */
+        .menu-toggle-input {
+            display: none;
+        }
+
+        .menu-toggle-label {
+            display: none; 
+            cursor: pointer;
+            font-size: 30px;
+            padding: 0 10px;
+            line-height: 1;
+        }
+
+        /* Стили для Навигационного меню */
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu ul li {
+            margin-left: 20px;
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu ul li a:hover {
+            color: #ff9900;
+        }
+
+        /* --- Медиазапрос для мобильных устройств (<= 768px) --- */
+        @media (max-width: 768px) {
+            
+            .header .container {
+                flex-wrap: wrap; 
+                justify-content: flex-start; 
+            }
+            
+            .header .container h1 {
+                order: 2; 
+                margin: 0 auto; 
+            }
+            
+            .menu-toggle-label {
+                display: block;
+                order: 1; 
+                margin-right: 10px; 
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+                order: 3; 
+                background-color: #444; 
+                padding: 10px 0;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-menu ul li {
+                margin: 0;
+                border-top: 1px solid #555;
+            }
+            
+            .nav-menu ul li:first-child {
+                border-top: none;
+            }
+            
+            .nav-menu ul li a {
+                display: block;
+                padding: 10px;
+            }
+            
+            .menu-toggle-input:checked ~ .nav-menu {
+                display: block;
+            }
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /* Стили Основного Контента */
+        /* -------------------------------------------------------------------------- */
+        .main-content {
+            flex-grow: 1;
+            padding: 40px 20px;
+        }
+        
+        .section {
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px; /* Отступ между секциями */
+        }
+
+        .section h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .section ul li::before {
+            content: '✓'; 
+            color: #ff9900;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /* Стили для Подвала (Footer) */
+        /* -------------------------------------------------------------------------- */
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
