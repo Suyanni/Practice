@@ -134,7 +134,7 @@
         /* -------------------------------------------------------------------------- */
         /* Стили Основного Контента (НОВАЯ ГЛАВНАЯ СТРАНИЦА) */
         /* -------------------------------------------------------------------------- */
-        .main-content {
+.main-content {
             flex-grow: 1;
             padding: 40px 20px;
         }
@@ -148,10 +148,9 @@
         }
 
         .welcome h2 {
+            font-size: 2.5em;
             color: #007bff;
-            margin-bottom: 15px;            
-            padding-bottom: 5px;
-            display: inline-block;
+            margin-bottom: 10px;
         }
         
         .welcome p {
@@ -161,44 +160,45 @@
             padding-bottom: 20px;
         }
 
-        /* Стили Галереи (5 изображений в ряд) */
+        /* ИСПРАВЛЕННЫЕ СТИЛИ ГАЛЕРЕИ (5 КАРТИНОК) */
         .image-gallery-5 {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px; /* Небольшой отступ между изображениями */
+            gap: 10px; 
             margin-bottom: 20px;
+            justify-content: space-between; /* Распределение элементов по ширине */
         }
 
         .image-card-5 {
-            flex: 1 1 18%; /* Позволяет каждому изображению занимать примерно 1/5 ширины */
-            min-width: 100px; /* Минимальная ширина, чтобы не было слишком узко на средних экранах */
+            /* 19% обеспечивает 5 элементов в ряд с отступом в 10px */
+            width: calc(20% - 8px); 
             overflow: hidden;
             border-radius: 6px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .image-card-5 img {
-            width: 100%;
-            height: 100px; /* Фиксированная высота для ровного ряда */
-            object-fit: cover; /* Изображение будет обрезать, чтобы заполнить контейнер */
+            width: 100%; /* Гарантирует, что изображение не вылезет за пределы родителя */
+            height: 100px; 
+            object-fit: cover; 
             display: block;
             transition: transform 0.3s;
         }
         
         .image-card-5:hover img {
-            transform: scale(1.05); /* Легкий эффект при наведении */
+            transform: scale(1.05); 
         }
         
         /* Адаптивность для галереи */
         @media (max-width: 900px) {
             .image-card-5 {
-                flex: 1 1 calc(33.333% - 10px); /* 3 в ряд на планшетах */
+                width: calc(33.333% - 7px); /* 3 в ряд */
             }
         }
 
         @media (max-width: 600px) {
             .image-card-5 {
-                flex: 1 1 calc(50% - 5px); /* 2 в ряд на мобильных */
+                width: calc(50% - 5px); /* 2 в ряд */
             }
         }
 
