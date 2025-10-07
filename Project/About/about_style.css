@@ -1,13 +1,9 @@
- /* Глобальные сбросы и базовые стили */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        /* -------------------------------------------------------------------------- */
-        /* СТИЛЬ ДЛЯ "ПРИЛИПАЮЩЕГО" ПОДВАЛА (STICKY FOOTER) */
-        /* -------------------------------------------------------------------------- */
         html, body {
             height: 100%;
             margin: 0;
@@ -21,7 +17,7 @@
             color: #333;
             display: flex; 
             flex-direction: column; 
-            min-height: 100vh; /* Гарантирует, что body занимает всю высоту окна */
+            min-height: 100vh;
         }
 
         .container {
@@ -29,10 +25,6 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* -------------------------------------------------------------------------- */
-        /* Стили Шапки и Навигации */
-        /* -------------------------------------------------------------------------- */
 
         .header {
             background-color: #333;
@@ -47,7 +39,6 @@
             align-items: center;
         }
 
-        /* Гамбургер-хак элементы */
         .menu-toggle-input {
             display: none;
         }
@@ -60,7 +51,6 @@
             line-height: 1;
         }
 
-        /* Стили для Навигационного меню */
         .nav-menu ul {
             list-style: none;
             display: flex;
@@ -81,31 +71,28 @@
             color: #ff9900;
         }
 
-        /* --- Медиазапрос для мобильных устройств (<= 768px) --- */
         @media (max-width: 768px) {
             
             .header .container {
                 flex-wrap: wrap; 
-                /* От логотипа/меню до края контейнера */
                 justify-content: flex-start; 
             }
             
             .header .container h1 {
-                order: 2; /* Логотип идет вторым */
-                /* ЦЕНТРИРОВАНИЕ: Отталкиваем его от бургер-меню и центрируем */
+                order: 2;
                 margin: 0 auto; 
             }
             
             .menu-toggle-label {
                 display: block;
-                order: 1; /* Кнопка идет первой (СЛЕВА) */
+                order: 1;
                 margin-right: 10px; 
             }
             
             .nav-menu {
                 display: none;
                 width: 100%;
-                order: 3; /* Меню идет третьим, занимая всю строку */
+                order: 3;
                 background-color: #444; 
                 padding: 10px 0;
             }
@@ -133,12 +120,9 @@
                 display: block;
             }
         }
-        /* -------------------------------------------------------------------------- */
-        /* Стили для Основного контента и Команды */
-        /* -------------------------------------------------------------------------- */
 
         .main-content {
-            flex-grow: 1; /* Выталкивает footer вниз */
+            flex-grow: 1;
             padding: 40px 20px;
         }
         
@@ -169,7 +153,6 @@
             margin-bottom: 15px;
         }
 
-        /* Стили для карточек команды (Картинка на всю ширину) */
         .team-grid {
             display: flex;
             flex-wrap: wrap;
@@ -181,7 +164,7 @@
         .team-member {
             flex-basis: calc(33% - 20px);
             text-align: center;
-            padding: 0; /* Убираем, чтобы картинка была вплотную */
+            padding: 0;
             border: 1px solid #eee;
             border-radius: 8px;
             overflow: hidden; 
@@ -195,7 +178,7 @@
         }
 
         .team-member img {
-            width: 100%; /* На всю ширину карточки */
+            width: 100%;
             height: 200px; 
             border-radius: 0;
             object-fit: cover;
@@ -203,7 +186,7 @@
         }
 
         .team-member-info {
-            padding: 15px; /* Отступы для текста */
+            padding: 15px;
         }
 
         .team-member h4 {
@@ -230,8 +213,6 @@
             }
         }
 
-
-        /* Стили для Подвала (Footer) */
         .footer {
             background-color: #333;
             color: white;
