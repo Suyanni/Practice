@@ -1,4 +1,5 @@
-* {
+/* Глобальные сбросы и базовые стили */
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -30,7 +31,7 @@
         }
 
         /* -------------------------------------------------------------------------- */
-        /* Стили Шапки и Навигации (Унифицированы) */
+        /* Стили Шапки и Навигации (УНИФИЦИРОВАНЫ СО ВСЕМИ СТРАНИЦАМИ) */
         /* -------------------------------------------------------------------------- */
 
         .header {
@@ -125,18 +126,13 @@
                 border-top: none;
             }
             
-            .nav-menu ul li a {
-                display: block;
-                padding: 10px;
-            }
-            
             .menu-toggle-input:checked ~ .nav-menu {
                 display: block;
             }
         }
 
         /* -------------------------------------------------------------------------- */
-        /* Стили Основного Контента */
+        /* Стили Основного Контента (НОВАЯ ГЛАВНАЯ СТРАНИЦА) */
         /* -------------------------------------------------------------------------- */
         .main-content {
             flex-grow: 1;
@@ -148,37 +144,62 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 25px; /* Отступ между секциями */
+            margin-bottom: 25px; 
         }
 
-        .section h2 {
+        .welcome h2 {
             color: #007bff;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #eee;
+            margin-bottom: 15px;            
             padding-bottom: 5px;
-        }
-
-        .section p {
-            margin-bottom: 15px;
-        }
-
-        .section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .section ul li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
+            display: inline-block;
         }
         
-        .section ul li::before {
-            content: '✓'; 
-            color: #ff9900;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
+        .welcome p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        /* Стили Галереи (5 изображений в ряд) */
+        .image-gallery-5 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Небольшой отступ между изображениями */
+            margin-bottom: 20px;
+        }
+
+        .image-card-5 {
+            flex: 1 1 18%; /* Позволяет каждому изображению занимать примерно 1/5 ширины */
+            min-width: 100px; /* Минимальная ширина, чтобы не было слишком узко на средних экранах */
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-card-5 img {
+            width: 100%;
+            height: 100px; /* Фиксированная высота для ровного ряда */
+            object-fit: cover; /* Изображение будет обрезать, чтобы заполнить контейнер */
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .image-card-5:hover img {
+            transform: scale(1.05); /* Легкий эффект при наведении */
+        }
+        
+        /* Адаптивность для галереи */
+        @media (max-width: 900px) {
+            .image-card-5 {
+                flex: 1 1 calc(33.333% - 10px); /* 3 в ряд на планшетах */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .image-card-5 {
+                flex: 1 1 calc(50% - 5px); /* 2 в ряд на мобильных */
+            }
         }
 
         /* -------------------------------------------------------------------------- */
